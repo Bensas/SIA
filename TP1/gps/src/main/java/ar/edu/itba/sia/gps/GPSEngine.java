@@ -14,6 +14,7 @@ public class GPSEngine {
     private boolean isFinished;
     private boolean isFailed;
     private SearchStrategy searchStrategy;
+    private Problem problem;
 
     // useful variables.
     private final List<GPSNode> borderNodes;
@@ -27,6 +28,12 @@ public class GPSEngine {
         this.borderNodes = new LinkedList<>();
         this.allNodes = new HashSet<>();
         this.bestCosts = new HashMap<>();
+    }
+
+    /* package */ GPSEngine(Problem problem, SearchStrategy searchStrategy, Heuristic heuristic) {
+        this(searchStrategy);
+        this.problem = problem;
+        this.heuristic = heuristic;
     }
 
     private SearchAlgorithm determineAlgorithm(SearchStrategy searchStrategy) {
@@ -46,6 +53,10 @@ public class GPSEngine {
         this.heuristic = h;
         this.explosionCounter = 0;
         search(p, h);
+    }
+
+    /* package */ void findSolution() {
+        findSolution(this.problem, this.heuristic == null ? new EmptyHeuristic() : this.heuristic);
     }
 
     private void search(Problem p, Heuristic h) {
@@ -68,7 +79,7 @@ public class GPSEngine {
 
                 if (searchAlgorithm.findSolution(candidates, borderNodes)) { // IDDFS says search needs to be reset.
                     if (previouslyExplored == allNodes.size()) { // We've reaches the maximum depth, search failed.
-                        setTestVariables(false, currentNode);
+                        setTestVariables(true, null);
                         return;
                     }
                     previouslyExplored = resetSearch(startNode);
@@ -76,9 +87,9 @@ public class GPSEngine {
 
             }
 
-            setTestVariables(true, currentNode);
-        } catch (IndexOutOfBoundsException e) {
             setTestVariables(false, currentNode);
+        } catch (IndexOutOfBoundsException e) {
+            setTestVariables(true, null);
         }
     }
 
