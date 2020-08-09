@@ -27,7 +27,7 @@ public class SokobanProblem implements Problem {
         if (!(state instanceof SokobanState))
             return false;
         for (Position cubePosition: ((SokobanState) state).getCubePositions())
-            if (((SokobanState) state).getBoard().elemAt(cubePosition.x, cubePosition.y) != Element.Target)
+            if (((SokobanState) state).getBoard().getElemAt(cubePosition.x, cubePosition.y) != Element.Target)
                 return false;
         return true;
     }

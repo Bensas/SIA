@@ -11,7 +11,12 @@ public class SokobanState implements State {
     private Position playerPosition;
 
     public Board getBoard() { return board; }
+    public void setBoard(Board board) { this.board = board; }
+
     public HashSet<Position> getCubePositions() { return cubePositions; }
+    public void setCubePositions(HashSet<Position> cubePositions) { this.cubePositions = cubePositions; }
+
+    public void setPlayerPosition(Position playerPosition) { this.playerPosition = playerPosition; }
 
     SokobanState(Board initialBoard){
         this.board = initialBoard;
@@ -24,13 +29,31 @@ public class SokobanState implements State {
 
     @Override
     public String getRepresentation() {
-        for (int i = 0; i < board.getWidth(); i++){
-            for (int j = 0; j < board.getHeight(); j++){
-                System.out.print(board.elemAt(i, j));
+        for (int j = board.getHeight() - 1; j >= 0; j--){
+            for (int i = 0; i < board.getWidth(); i++){
+                if (cubePositions.contains(new Position(i, j))){
+                    System.out.print("$");
+                } else if (playerPosition.equals(new Position(i, j))){
+                    System.out.print("@");
+                } else {
+                    System.out.print(asciiRepresentation(board.getElemAt(i, j)));
+                }
             }
             System.out.println("");
         }
         return null;
+    }
+
+    private Character asciiRepresentation(Element elem){
+        switch(elem){
+            case Wall:
+                return '#';
+            case Empty:
+                return ' ';
+            case Target:
+                return '.';
+        }
+        return '?';
     }
 
     public Optional<State> movePlayer(Direction direction){
