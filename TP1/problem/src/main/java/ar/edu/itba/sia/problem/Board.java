@@ -11,7 +11,6 @@ public class Board {
 
     Board(Board board){
         this.grid = Arrays.stream(board.grid).map(i -> Arrays.copyOf(i, i.length)).toArray(Element[][]::new);
-
     }
 
     public Element elemAt(int x, int y){

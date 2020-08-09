@@ -1,11 +1,9 @@
 package ar.edu.itba.sia.problem;
 
-import sun.jvm.hotspot.utilities.Assert;
-
 public class Position {
     int x;
     int y;
-    Position(int x, int y){
+    public Position(int x, int y){
         this.x = x;
         this.y = y;
     }
