@@ -42,6 +42,7 @@ public class GPSEngine {
         if (searchStrategy == SearchStrategy.BFS) return new BFSAlgorithm();
         if (searchStrategy == SearchStrategy.DFS) return new DFSAlgorithm();
         if (searchStrategy == SearchStrategy.IDDFS) return new IterativeDeepeningSearch();
+        if (searchStrategy == SearchStrategy.IDASTAR) return new IDAStar();
         throw new IllegalArgumentException("invalid search strategy given: " + searchStrategy);
     }
 
@@ -78,7 +79,7 @@ public class GPSEngine {
                 List<GPSNode> candidates = expand(rulesToApply, currentNode, h);
 
                 if (searchAlgorithm.findSolution(candidates, borderNodes)) { // IDDFS says search needs to be reset.
-                    if (previouslyExplored == allNodes.size()) { // We've reaches the maximum depth, search failed.
+                    if (previouslyExplored == allNodes.size()) { // We've reached the maximum depth, search failed.
                         setTestVariables(true, null);
                         return;
                     }
