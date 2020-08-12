@@ -27,6 +27,18 @@ public class BoardParserTest {
         result.getRepresentation();
     }
 
+    /*
+          ###
+          #.#
+      #####.#####
+     ##         ##
+    ##  # # # #  ##
+    #  ##     ##  #
+    # ##  # #  ## #
+    #     $@$     #
+    ####  ###  ####
+       #### ####
+     */
     @Test
     public void testSimpleLevel(){
         String board = "      ###\n      #.#\n  #####.#####\n ##         ##\n##  # # # #  ##\n#  ##     ##  #\n# ##  # #  ## #\n#     $@$     #\n####  ###  ####\n   #### ####";
