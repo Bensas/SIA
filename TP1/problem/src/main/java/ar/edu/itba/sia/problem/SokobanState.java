@@ -73,4 +73,11 @@ public class SokobanState implements State {
         }
         return Optional.of(newGameState);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof SokobanState)) return false;
+        SokobanState state = (SokobanState) obj;
+        return state.board.equals(this.board) && state.cubePositions.equals(cubePositions);
+    }
 }

@@ -57,4 +57,11 @@ public class Board {
     public boolean isValidPosition(Position pos){
         return getElemAt(pos) != Element.Wall;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Board)) return false;
+        Board board = (Board) obj;
+        return Arrays.deepEquals(this.grid, board.grid);
+    }
 }

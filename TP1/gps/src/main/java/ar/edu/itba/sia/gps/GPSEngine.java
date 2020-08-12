@@ -71,12 +71,10 @@ public class GPSEngine {
 
         try {
             while (!p.isGoal(currentState)) {
-                List<Rule> rulesToApply = p.getRules();
-
                 currentNode = borderNodes.remove(0);
                 currentState = currentNode.getState();
 
-                List<GPSNode> candidates = expand(rulesToApply, currentNode, h);
+                List<GPSNode> candidates = expand(p.getRules(), currentNode, h);
 
                 if (searchAlgorithm.findSolution(candidates, borderNodes)) { // IDDFS says search needs to be reset.
                     if (previouslyExplored == allNodes.size()) { // We've reached the maximum depth, search failed.

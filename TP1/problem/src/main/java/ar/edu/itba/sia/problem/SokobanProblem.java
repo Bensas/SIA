@@ -11,7 +11,7 @@ public class SokobanProblem implements Problem {
     SokobanState initialState;
     List<Rule> rules = new ArrayList<>();
 
-    SokobanProblem(SokobanState initialState){
+    public SokobanProblem(SokobanState initialState){
         this.initialState = initialState;
         for (Direction dir: Direction.values())
             rules.add(new SokobanRule(dir));

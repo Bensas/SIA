@@ -14,7 +14,7 @@ public class SokobanRule implements Rule {
 
     @Override
     public Integer getCost() {
-        return null;
+        return 1;
     }
 
     @Override
