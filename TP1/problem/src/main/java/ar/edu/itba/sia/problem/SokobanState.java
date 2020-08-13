@@ -20,6 +20,7 @@ public class SokobanState implements State {
 
     SokobanState(Board initialBoard){
         this.board = initialBoard;
+        this.cubePositions = new HashSet<>();
     }
     SokobanState(SokobanState state){
         this.board = new Board(state.board);
