@@ -18,7 +18,7 @@ public class SokobanState implements State {
 
     public void setPlayerPosition(Position playerPosition) { this.playerPosition = playerPosition; }
 
-    SokobanState(Board initialBoard){
+    public SokobanState(Board initialBoard){
         this.board = initialBoard;
         this.cubePositions = new HashSet<>();
     }
@@ -79,6 +79,8 @@ public class SokobanState implements State {
     public boolean equals(Object obj) {
         if (!(obj instanceof SokobanState)) return false;
         SokobanState state = (SokobanState) obj;
-        return state.board.equals(this.board) && state.cubePositions.equals(cubePositions);
+        return state.board.equals(this.board) &&
+                state.cubePositions.equals(this.cubePositions) &&
+                state.playerPosition.equals(this.playerPosition);
     }
 }
