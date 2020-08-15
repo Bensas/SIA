@@ -14,7 +14,7 @@ public class Board {
         this.grid = grid;
     }
 
-    Board(int boardWidth){
+    public Board(int boardWidth){
         grid = new Element[boardWidth][boardWidth];
         for (int i = 0; i < grid.length; i++){
             for (int j = 0; j < grid[0].length; j++){
@@ -63,5 +63,10 @@ public class Board {
         if (!(obj instanceof Board)) return false;
         Board board = (Board) obj;
         return Arrays.deepEquals(this.grid, board.grid);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.deepHashCode(grid);
     }
 }

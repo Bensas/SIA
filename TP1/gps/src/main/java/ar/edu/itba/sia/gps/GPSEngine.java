@@ -69,8 +69,10 @@ public class GPSEngine {
         allNodes.add(currentNode);
         int previouslyExplored = 0;
 
+        System.out.println("Starting search...");
         try {
             while (!p.isGoal(currentState)) {
+                currentState.getRepresentation();
                 currentNode = borderNodes.remove(0);
                 currentState = currentNode.getState();
 

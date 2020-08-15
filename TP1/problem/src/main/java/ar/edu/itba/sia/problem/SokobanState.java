@@ -83,4 +83,13 @@ public class SokobanState implements State {
                 state.cubePositions.equals(this.cubePositions) &&
                 state.playerPosition.equals(this.playerPosition);
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 17;
+        hash = hash * 31 + board.hashCode();
+        hash = hash * 31 + cubePositions.hashCode();
+        hash = hash * 31 + playerPosition.hashCode();
+        return hash;
+    }
 }
