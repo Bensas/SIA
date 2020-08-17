@@ -36,4 +36,14 @@ public class DistanceHeuristic implements Heuristic {
     private int distance(int i, int j, Position p) {
         return Math.abs(i - p.getX()) + Math.abs(j - p.getY());
     }
+
+    @Override
+    public String getName() {
+        return "Distance";
+    }
+
+    @Override
+    public String toString() {
+        return "The sum of the distance of all blocks to their closest goal.";
+    }
 }

@@ -138,31 +138,31 @@ public class GPSEngine {
         return this.explosionCounter;
     }
 
-    /* package */ boolean isFailed() {
+    public boolean isFailed() {
         return this.isFailed;
     }
 
-    /* package */ boolean isFinished() {
+    public boolean isFinished() {
         return this.isFinished;
     }
 
-    /* package */ GPSNode getSolutionNode() {
+    public GPSNode getSolutionNode() {
         return this.solutionNode;
     }
 
-    /* package */ SearchStrategy getStrategy() {
+    public SearchStrategy getStrategy() {
         return this.searchStrategy;
     }
 
-    /* package */ Set<GPSNode> getBestCosts() {
+    public Set<GPSNode> getBestCosts() {
         return this.allNodes;
     }
 
-    /* package */ List<GPSNode> getOpen() {
+    public List<GPSNode> getOpen() {
         return this.borderNodes;
     }
 
-    /* package */ Heuristic getHeuristic() {
+    public Heuristic getHeuristic() {
         return this.heuristic;
     }
 }

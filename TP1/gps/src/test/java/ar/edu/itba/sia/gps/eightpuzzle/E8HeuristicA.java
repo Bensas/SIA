@@ -29,4 +29,9 @@ public class E8HeuristicA implements Heuristic {
 		}
 		return count;
 	}
+
+	@Override
+	public String getName() {
+		return "E8 test heuristic";
+	}
 }

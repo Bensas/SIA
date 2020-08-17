@@ -11,4 +11,6 @@ public interface Heuristic {
      * @return The value of the Heuristic.
      */
     Integer getValue(State state);
+
+    String getName();
 }

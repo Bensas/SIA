@@ -4,6 +4,8 @@ import ar.edu.itba.sia.interfaces.Heuristic;
 import ar.edu.itba.sia.interfaces.Rule;
 import ar.edu.itba.sia.interfaces.State;
 
+import java.util.LinkedList;
+
 
 public class GPSNode {
 
@@ -29,6 +31,13 @@ public class GPSNode {
         this.heuristicValue = heuristic;
         this.parent = parent;
         this.generationRule = rule;
+    }
+
+    public LinkedList<GPSNode> getPath() {
+        LinkedList<GPSNode> ret = new LinkedList<>();
+        for (GPSNode current = this; current != null; current = current.getParent())
+            ret.push(current);
+        return ret;
     }
 
     public GPSNode getParent() {

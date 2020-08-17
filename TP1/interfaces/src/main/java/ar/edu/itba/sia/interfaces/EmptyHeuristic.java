@@ -10,4 +10,9 @@ public class EmptyHeuristic implements Heuristic {
     public String toString() {
         return "Trivial heuristic";
     }
+
+    @Override
+    public String getName() {
+        return "empty heuristic";
+    }
 }

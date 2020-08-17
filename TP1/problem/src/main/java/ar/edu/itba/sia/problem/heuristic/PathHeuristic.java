@@ -64,4 +64,14 @@ public class PathHeuristic implements Heuristic {
         previousSteps.pop();
         return ret + 1;
     }
+
+    @Override
+    public String getName() {
+        return "Path";
+    }
+
+    @Override
+    public String toString() {
+        return "The length of the path to be traversed to get to the closest goal. Taking it account only walls.";
+    }
 }

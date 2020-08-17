@@ -24,4 +24,9 @@ public class WalkingHeuristic implements Heuristic {
         double y = walkingState.getLocation().getY() - walkingState.getTarget().getY();
         return (int)Math.ceil(Math.sqrt(x * x + y * y));
     }
+
+    @Override
+    public String getName() {
+        return "Walking test heuristic";
+    }
 }

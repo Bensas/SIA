@@ -27,4 +27,14 @@ public class InPlaceHeuristic implements Heuristic {
     private boolean isAtTarget(Position p, Board board) {
         return board.getElemAt(p.getX(), p.getY()) == Element.Target;
     }
+
+    @Override
+    public String getName() {
+        return "In place";
+    }
+
+    @Override
+    public String toString() {
+        return "The count of all blocks that aren't at a goal.";
+    }
 }

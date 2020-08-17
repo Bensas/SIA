@@ -1,6 +1,7 @@
 package ar.edu.itba.sia.main;
 
 import ar.edu.itba.sia.gps.GPSEngine;
+import ar.edu.itba.sia.gps.GPSNode;
 import ar.edu.itba.sia.interfaces.Heuristic;
 import ar.edu.itba.sia.interfaces.SearchStrategy;
 import ar.edu.itba.sia.problem.BoardParser;
@@ -9,6 +10,8 @@ import ar.edu.itba.sia.problem.SokobanState;
 import ar.edu.itba.sia.problem.heuristic.DistanceHeuristic;
 import ar.edu.itba.sia.problem.heuristic.InPlaceHeuristic;
 import ar.edu.itba.sia.problem.heuristic.PathHeuristic;
+
+import java.util.LinkedList;
 
 public class Sokoban
 {
@@ -35,8 +38,10 @@ public class Sokoban
                 properUse();
                 System.out.println("\nInvalid heuristic given.\n");
             }
+            long then = System.currentTimeMillis();
             engine.findSolution(new SokobanProblem(state), heuristic);
-            printData(engine);
+            long now = System.currentTimeMillis();
+            printData(engine, now - then);
             return;
         }
         if (searchStrategy == SearchStrategy.GREEDY ||
@@ -46,8 +51,10 @@ public class Sokoban
             System.out.println("\n" + searchStrategy + " requires a heuristic but none was given.\n");
             return;
         }
+        long then = System.currentTimeMillis();
         engine.findSolution(new SokobanProblem(state));
-        printData(engine);
+        long now = System.currentTimeMillis();
+        printData(engine, now - then);
     }
 
     private static Heuristic parseHeuristic(String heuristic) {
@@ -58,9 +65,26 @@ public class Sokoban
         return null;
     }
 
-    private static void printData(GPSEngine engine) {
-        // TODO: Print out necessary information.
-        System.out.println("Done!");
+    private static void printData(GPSEngine engine, long time) {
+        printPath(engine.getSolutionNode().getPath());
+        System.out.println("Done!\n");
+        System.out.println("The search was a " + (engine.isFailed() ? "failure" : "success!"));
+        System.out.println("Search conducted using " + engine.getStrategy() + " algorithm.");
+        if (engine.getHeuristic() != null) {
+            System.out.println("Search conducted using " + engine.getHeuristic().getName() + " heuristic.");
+            System.out.println("this heuristic arrives at its value by the method of: " + engine.getHeuristic());
+        }
+        System.out.println("Solution cost was " + engine.getSolutionNode().getCost());
+        System.out.println("A total of " + engine.getBestCosts().size() + " nodes where expanded.");
+        System.out.println("A total of " + engine.getOpen().size() + " nodes remained to be expanded.");
+        System.out.println("The search took a total of " + time + " milliseconds.");
+    }
+
+    private static void printPath(LinkedList<GPSNode> path) {
+        while (!path.isEmpty()) {
+            System.out.println(path.poll());
+            System.out.println("");
+        }
     }
 
     private static void properUse() {
@@ -68,6 +92,6 @@ public class Sokoban
                 "file_path: path to plain text file containing initial board configuration.\n" +
                 "algorithm: algorithm for problem solver to use. Options are: BFS|DFS|IDDFS|GREEDY|ASTAR|IDASTAR.\n" +
                 "heuristic: heuristic to use if algorithm is informed. Mandatory if algorithm = GREEDY|ASTAR|IDASTAR, optional otherwise.\n" +
-                "           options are: place|distance|path");
+                "           options are: distance|path|place");
     }
 }

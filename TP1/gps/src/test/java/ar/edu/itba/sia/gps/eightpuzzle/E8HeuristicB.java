@@ -32,4 +32,9 @@ public class E8HeuristicB implements Heuristic {
 		}
 		return count;
 	}
+
+	@Override
+	public String getName() {
+		return "E8 test heuristic B.";
+	}
 }
