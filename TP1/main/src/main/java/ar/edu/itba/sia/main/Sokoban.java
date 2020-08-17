@@ -82,7 +82,7 @@ public class Sokoban
 
     private static void printPath(LinkedList<GPSNode> path) {
         while (!path.isEmpty()) {
-            System.out.println(path.poll());
+            System.out.println(path.pop().getState().getRepresentation());
             System.out.println("");
         }
     }
