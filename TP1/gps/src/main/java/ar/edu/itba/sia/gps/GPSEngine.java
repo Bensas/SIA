@@ -72,7 +72,6 @@ public class GPSEngine {
         System.out.println("Starting search...");
         try {
             while (!p.isGoal(currentState)) {
-//                currentState.getRepresentation();
                 currentNode = borderNodes.remove(0);
                 currentState = currentNode.getState();
 
