@@ -30,19 +30,20 @@ public class SokobanState implements State {
 
     @Override
     public String getRepresentation() {
+        StringBuilder builder = new StringBuilder();
         for (int j = board.getHeight() - 1; j >= 0; j--){
             for (int i = 0; i < board.getWidth(); i++){
                 if (cubePositions.contains(new Position(i, j))){
-                    System.out.print("$");
+                    builder.append("$");
                 } else if (playerPosition.equals(new Position(i, j))){
-                    System.out.print("@");
+                    builder.append("@");
                 } else {
-                    System.out.print(asciiRepresentation(board.getElemAt(i, j)));
+                    builder.append(asciiRepresentation(board.getElemAt(i, j)));
                 }
             }
-            System.out.println("");
+            builder.append("\n");
         }
-        return null;
+        return builder.toString();
     }
 
     private Character asciiRepresentation(Element elem){
@@ -91,5 +92,10 @@ public class SokobanState implements State {
         hash = hash * 31 + cubePositions.hashCode();
         hash = hash * 31 + playerPosition.hashCode();
         return hash;
+    }
+
+    @Override
+    public String toString() {
+        return getRepresentation();
     }
 }
