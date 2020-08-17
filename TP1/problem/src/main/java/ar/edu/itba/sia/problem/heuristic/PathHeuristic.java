@@ -72,6 +72,6 @@ public class PathHeuristic implements Heuristic {
 
     @Override
     public String toString() {
-        return "The length of the path to be traversed to get to the closest goal. Taking it account only walls.";
+        return "The length of the path to be traversed to get to the closest goal. Taking into account only walls.";
     }
 }

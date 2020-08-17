@@ -65,12 +65,18 @@ public class Sokoban
         return null;
     }
 
+    private static boolean isInformedHeuristic(SearchStrategy searchStrategy) {
+        return  searchStrategy == SearchStrategy.GREEDY ||
+                searchStrategy == SearchStrategy.ASTAR  ||
+                searchStrategy == SearchStrategy.IDASTAR;
+    }
+
     private static void printData(GPSEngine engine, long time) {
         printPath(engine.getSolutionNode().getPath());
         System.out.println("Done!\n");
         System.out.println("The search was a " + (engine.isFailed() ? "failure" : "success!"));
         System.out.println("Search conducted using " + engine.getStrategy() + " algorithm.");
-        if (engine.getHeuristic() != null) {
+        if (engine.getHeuristic() != null && isInformedHeuristic(engine.getStrategy())) {
             System.out.println("Search conducted using " + engine.getHeuristic().getName() + " heuristic.");
             System.out.println("this heuristic arrives at its value by the method of: " + engine.getHeuristic());
         }
