@@ -58,6 +58,10 @@ public class Board {
         return getElemAt(pos) != Element.Wall;
     }
 
+    public boolean isAtTarget(Position pos){
+        return getElemAt(pos) == Element.Target;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (!(obj instanceof Board)) return false;

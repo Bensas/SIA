@@ -2,6 +2,7 @@ package ar.edu.itba.sia.problem;
 
 import ar.edu.itba.sia.interfaces.State;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Optional;
 
@@ -73,7 +74,26 @@ public class SokobanState implements State {
             newGameState.cubePositions.remove(newGameState.playerPosition);
             newGameState.cubePositions.add(pushedCubePosition);
         }
+        if (isImpossibleState(newGameState))
+            return Optional.empty();
         return Optional.of(newGameState);
+    }
+
+    public static boolean isImpossibleState(SokobanState state){
+        for (Position cubePosition: state.getCubePositions())
+            if (!state.getBoard().isAtTarget(cubePosition) && isInmovable(cubePosition, state))
+                return true;
+        return false;
+    }
+
+    public static boolean isInmovable(Position cubePosition, SokobanState state){
+        HashMap<Direction, Position> surroundingPositions = Position.getSurroundingPositions(cubePosition);
+        return ((isBlocked(surroundingPositions.get(Direction.Up), state) || isBlocked(surroundingPositions.get(Direction.Down), state)) &&
+                (isBlocked(surroundingPositions.get(Direction.Right), state) || isBlocked(surroundingPositions.get(Direction.Left), state)));
+    }
+
+    private static boolean isBlocked(Position pos, SokobanState state){
+        return state.getCubePositions().contains(pos) || !state.getBoard().isValidPosition(pos);
     }
 
     @Override

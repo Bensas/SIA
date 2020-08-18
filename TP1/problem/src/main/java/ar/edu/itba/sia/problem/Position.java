@@ -1,5 +1,7 @@
 package ar.edu.itba.sia.problem;
 
+import java.util.HashMap;
+
 public class Position {
     int x;
     int y;
@@ -53,6 +55,16 @@ public class Position {
 
     public int getY() {
         return y;
+    }
+
+    public static HashMap<Direction, Position> getSurroundingPositions(Position p){
+        HashMap<Direction, Position> result = new HashMap<>();
+        for (Direction dir: Direction.values()){
+            p.move(dir);
+            result.put(dir, new Position(p));
+            p.moveInOppositeDirection(dir);
+        }
+        return result;
     }
 
     @Override
