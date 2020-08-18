@@ -41,7 +41,7 @@ public class Sokoban
             long then = System.currentTimeMillis();
             engine.findSolution(new SokobanProblem(state), heuristic);
             long now = System.currentTimeMillis();
-            printData(engine, now - then);
+            printData(engine, now - then, args[0]);
             return;
         }
         if (searchStrategy == SearchStrategy.GREEDY ||
@@ -54,7 +54,7 @@ public class Sokoban
         long then = System.currentTimeMillis();
         engine.findSolution(new SokobanProblem(state));
         long now = System.currentTimeMillis();
-        printData(engine, now - then);
+        printData(engine, now - then, args[0]);
     }
 
     private static Heuristic parseHeuristic(String heuristic) {
@@ -71,19 +71,20 @@ public class Sokoban
                 searchStrategy == SearchStrategy.IDASTAR;
     }
 
-    private static void printData(GPSEngine engine, long time) {
+    private static void printData(GPSEngine engine, long time, String path) {
         printPath(engine.getSolutionNode().getPath());
         System.out.println("Done!\n");
         System.out.println("The search was a " + (engine.isFailed() ? "failure" : "success!"));
-        System.out.println("Search conducted using " + engine.getStrategy() + " algorithm.");
+        System.out.println("algorithm: " + engine.getStrategy());
         if (engine.getHeuristic() != null && isInformedHeuristic(engine.getStrategy())) {
-            System.out.println("Search conducted using " + engine.getHeuristic().getName() + " heuristic.");
+            System.out.println("heuristic: " + engine.getHeuristic().getName());
             System.out.println("this heuristic arrives at its value by the method of: " + engine.getHeuristic());
         }
-        System.out.println("Solution cost was " + engine.getSolutionNode().getCost());
-        System.out.println("A total of " + engine.getBestCosts().size() + " nodes where expanded.");
-        System.out.println("A total of " + engine.getOpen().size() + " nodes remained to be expanded.");
-        System.out.println("The search took a total of " + time + " milliseconds.");
+        System.out.println("cost: " + engine.getSolutionNode().getCost());
+        System.out.println("expanded: " + engine.getBestCosts().size());
+        System.out.println("frontier: " + engine.getOpen().size());
+        System.out.println("time: " + time);
+        System.out.println("level: " + getLevel(path));
     }
 
     private static void printPath(LinkedList<GPSNode> path) {
@@ -99,5 +100,9 @@ public class Sokoban
                 "algorithm: algorithm for problem solver to use. Options are: BFS|DFS|IDDFS|GREEDY|ASTAR|IDASTAR.\n" +
                 "heuristic: heuristic to use if algorithm is informed. Mandatory if algorithm = GREEDY|ASTAR|IDASTAR, optional otherwise.\n" +
                 "           options are: distance|path|place");
+    }
+
+    private static String getLevel(String path) {
+        return path.substring(path.lastIndexOf("/") + 1);
     }
 }

@@ -38,10 +38,10 @@
       <version>${project.parent.version}</version>
     </dependency>
     <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.12</version>
-        <scope>test</scope>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 
@@ -86,6 +86,19 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>appassembler-maven-plugin</artifactId>
+          <version>1.10</version>
+          <configuration>
+            <programs>
+              <program>
+                <mainClass>ar.edu.itba.sia.main.Sokoban</mainClass>
+                <id>sokoban</id>
+              </program>
+            </programs>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
