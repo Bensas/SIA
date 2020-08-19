@@ -72,9 +72,13 @@ public class Sokoban
     }
 
     private static void printData(GPSEngine engine, long time, String path) {
+        if (engine.isFailed()) {
+            System.out.println("The search was a failure");
+            return;
+        }
         printPath(engine.getSolutionNode().getPath());
         System.out.println("Done!\n");
-        System.out.println("The search was a " + (engine.isFailed() ? "failure" : "success!"));
+        System.out.println("The search was a success!");
         System.out.println("algorithm: " + engine.getStrategy());
         if (engine.getHeuristic() != null && isInformedHeuristic(engine.getStrategy())) {
             System.out.println("heuristic: " + engine.getHeuristic().getName());

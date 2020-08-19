@@ -69,7 +69,6 @@ public class GPSEngine {
         allNodes.add(currentNode);
         int previouslyExplored = 0;
 
-        System.out.println("Starting search...");
         try {
             while (!p.isGoal(currentState)) {
                 currentNode = borderNodes.remove(0);
@@ -78,7 +77,9 @@ public class GPSEngine {
                 List<GPSNode> candidates = expand(p.getRules(), currentNode, h);
 
                 if (searchAlgorithm.findSolution(candidates, borderNodes)) { // IDDFS says search needs to be reset.
-                    if (previouslyExplored == allNodes.size()) { // We've reached the maximum depth, search failed.
+                    if (previouslyExplored == allNodes.size() && searchStrategy == SearchStrategy.IDDFS) { // We've reached the maximum depth, search failed.
+                        // The == IDDFS is a workaround given the fact that there is no consistent way
+                        // of ending the search with IDASTAR on a no solution problem.
                         setTestVariables(true, null);
                         return;
                     }
