@@ -82,7 +82,7 @@ public class Sokoban
         System.out.println("algorithm: " + engine.getStrategy());
         if (engine.getHeuristic() != null && isInformedHeuristic(engine.getStrategy())) {
             System.out.println("heuristic: " + engine.getHeuristic().getName());
-            // System.out.println("this heuristic arrives at its value by the method of: " + engine.getHeuristic());
+            System.out.println("this heuristic arrives at its value by the method of: " + engine.getHeuristic());
         }
         System.out.println("cost: " + engine.getSolutionNode().getCost());
         System.out.println("expanded: " + engine.getBestCosts().size());
