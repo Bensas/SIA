@@ -24,7 +24,7 @@ public class BoardParserTest {
         String board = "    \n  @  \n     \n  \n       \n \n \n   \n  \n "; //MaxWidth: 7, MaxHeight: 10
         String inputFileName = createFileFromString("testEmptyBoard.sok", board);
         SokobanState result = BoardParser.getStateFromFile(inputFileName);
-        result.getRepresentation();
+        System.out.println(result.getRepresentation());
     }
 
     /*
@@ -44,7 +44,7 @@ public class BoardParserTest {
         String board = "      ###\n      #.#\n  #####.#####\n ##         ##\n##  # # # #  ##\n#  ##     ##  #\n# ##  # #  ## #\n#     $@$     #\n####  ###  ####\n   #### ####";
         String inputFileName = createFileFromString("testSimpleLevel.sok", board);
         SokobanState result = BoardParser.getStateFromFile(inputFileName);
-        result.getRepresentation();
+        System.out.println(result.getRepresentation());
     }
 
     private String createFileFromString(String fileName, String contents){

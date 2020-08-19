@@ -1,0 +1,1023 @@
+
+algorithm: BFS
+cost: 26
+expanded: 13876
+frontier: 921
+time: 1362
+level: lvl181.sok
+
+algorithm: DFS
+cost: 46
+expanded: 625
+frontier: 32
+time: 63
+level: lvl181.sok
+
+algorithm: IDDFS
+cost: 26
+expanded: 1370
+frontier: 19
+time: 9243
+level: lvl181.sok
+
+algorithm: GREEDY
+heuristic: In place
+cost: 26
+expanded: 204
+frontier: 60
+time: 54
+level: lvl181.sok
+
+algorithm: GREEDY
+heuristic: Path
+cost: 30
+expanded: 5738
+frontier: 44
+time: 1402
+level: lvl181.sok
+
+algorithm: GREEDY
+heuristic: Distance
+cost: 29
+expanded: 12222
+frontier: 755
+time: 1210
+level: lvl181.sok
+
+algorithm: ASTAR
+heuristic: In place
+cost: 26
+expanded: 10038
+frontier: 1317
+time: 1015
+level: lvl181.sok
+
+algorithm: ASTAR
+heuristic: Path
+cost: 26
+expanded: 9074
+frontier: 1346
+time: 2109
+level: lvl181.sok
+
+algorithm: ASTAR
+heuristic: Distance
+cost: 26
+expanded: 14561
+frontier: 545
+time: 2085
+level: lvl181.sok
+
+algorithm: IDASTAR
+heuristic: In place
+cost: 26
+expanded: 958
+frontier: 17
+time: 3581
+level: lvl181.sok
+
+algorithm: IDASTAR
+heuristic: Path
+cost: 26
+expanded: 814
+frontier: 17
+time: 7294
+level: lvl181.sok
+
+algorithm: IDASTAR
+heuristic: Distance
+cost: 26
+expanded: 1409
+frontier: 17
+time: 11470
+level: lvl181.sok
+
+algorithm: BFS
+cost: 58
+expanded: 132163
+frontier: 3836
+time: 36434
+level: lvl233.sok
+
+algorithm: DFS
+cost: 239
+expanded: 106643
+frontier: 130
+time: 20806
+level: lvl233.sok
+
+algorithm: IDDFS
+cost: 58
+expanded: 105227
+frontier: 26
+time: 596985
+level: lvl233.sok
+
+algorithm: GREEDY
+heuristic: In place
+cost: 61
+expanded: 41823
+frontier: 309
+time: 4421
+level: lvl233.sok
+
+algorithm: GREEDY
+heuristic: Path
+cost: 83
+expanded: 20844
+frontier: 896
+time: 21490
+level: lvl233.sok
+
+algorithm: GREEDY
+heuristic: Distance
+cost: 62
+expanded: 7592
+frontier: 515
+time: 549
+level: lvl233.sok
+
+algorithm: ASTAR
+heuristic: In place
+cost: 58
+expanded: 114897
+frontier: 3985
+time: 50612
+level: lvl233.sok
+
+algorithm: ASTAR
+heuristic: Path
+cost: 58
+expanded: 86133
+frontier: 4634
+time: 112460
+level: lvl233.sok
+
+algorithm: ASTAR
+heuristic: Distance
+cost: 58
+expanded: 101995
+frontier: 4729
+time: 31787
+level: lvl233.sok
+
+algorithm: IDASTAR
+heuristic: In place
+cost: 58
+expanded: 93376
+frontier: 26
+time: 339394
+level: lvl233.sok
+
+algorithm: IDASTAR
+heuristic: Path
+cost: 58
+expanded: 69359
+frontier: 26
+time: 1835685
+level: lvl233.sok
+
+algorithm: IDASTAR
+heuristic: Distance
+cost: 58
+expanded: 83105
+frontier: 26
+time: 442169
+level: lvl233.sok
+
+algorithm: BFS
+cost: 69
+expanded: 7400
+frontier: 77
+time: 655
+level: lvl164.sok
+
+algorithm: DFS
+cost: 203
+expanded: 4362
+frontier: 54
+time: 377
+level: lvl164.sok
+
+algorithm: IDDFS
+cost: 69
+expanded: 2574
+frontier: 22
+time: 7643
+level: lvl164.sok
+
+algorithm: GREEDY
+heuristic: In place
+cost: 69
+expanded: 2477
+frontier: 122
+time: 349
+level: lvl164.sok
+
+algorithm: GREEDY
+heuristic: Path
+cost: 119
+expanded: 2264
+frontier: 53
+time: 687
+level: lvl164.sok
+
+algorithm: GREEDY
+heuristic: Distance
+cost: 85
+expanded: 6737
+frontier: 36
+time: 697
+level: lvl164.sok
+
+algorithm: ASTAR
+heuristic: In place
+cost: 69
+expanded: 7242
+frontier: 98
+time: 709
+level: lvl164.sok
+
+algorithm: ASTAR
+heuristic: Path
+cost: 69
+expanded: 5597
+frontier: 191
+time: 1302
+level: lvl164.sok
+
+algorithm: ASTAR
+heuristic: Distance
+cost: 69
+expanded: 7503
+frontier: 54
+time: 720
+level: lvl164.sok
+
+algorithm: IDASTAR
+heuristic: In place
+cost: 69
+expanded: 2523
+frontier: 21
+time: 7418
+level: lvl164.sok
+
+algorithm: IDASTAR
+heuristic: Path
+cost: 69
+expanded: 1779
+frontier: 18
+time: 12367
+level: lvl164.sok
+
+algorithm: IDASTAR
+heuristic: Distance
+cost: 69
+expanded: 2638
+frontier: 22
+time: 9615
+level: lvl164.sok
+
+algorithm: BFS
+cost: 54
+expanded: 278927
+frontier: 11660
+time: 200785
+level: lvl278.sok
+
+algorithm: DFS
+cost: 216
+expanded: 277970
+frontier: 114
+time: 175192
+level: lvl278.sok
+
+algorithm: IDDFS
+cost: 54
+expanded: 251863
+frontier: 23
+time: 2141082
+level: lvl278.sok
+
+algorithm: GREEDY
+heuristic: In place
+cost: 64
+expanded: 3131
+frontier: 386
+time: 221
+level: lvl278.sok
+
+algorithm: GREEDY
+heuristic: Path
+cost: 100
+expanded: 18485
+frontier: 795
+time: 18337
+level: lvl278.sok
+
+algorithm: GREEDY
+heuristic: Distance
+cost: 134
+expanded: 418810
+frontier: 4523
+time: 686439
+level: lvl278.sok
+
+algorithm: ASTAR
+heuristic: In place
+cost: 54
+expanded: 231518
+frontier: 11933
+time: 301539
+level: lvl278.sok
+
+algorithm: ASTAR
+heuristic: Path
+cost: 54
+expanded: 172740
+frontier: 11593
+time: 312327
+level: lvl278.sok
+
+algorithm: ASTAR
+heuristic: Distance
+cost: 54
+expanded: 331024
+frontier: 12419
+time: 549885
+level: lvl278.sok
+
+algorithm: IDASTAR
+heuristic: In place
+cost: 54
+expanded: 219757
+frontier: 23
+time: 1438534
+level: lvl278.sok
+
+algorithm: IDASTAR
+heuristic: Path
+cost: 54
+expanded: 167359
+frontier: 23
+time: 2080696
+level: lvl278.sok
+
+algorithm: IDASTAR
+heuristic: Distance
+cost: 54
+expanded: 290711
+frontier: 23
+time: 4380581
+level: lvl278.sok
+
+algorithm: BFS
+cost: 70
+expanded: 496940
+frontier: 6164
+time: 518205
+level: lvl261.sok
+
+algorithm: DFS
+cost: 346
+expanded: 354811
+frontier: 193
+time: 297407
+level: lvl261.sok
+
+algorithm: IDDFS
+cost: 70
+expanded: 120978
+frontier: 41
+time: 7815699
+level: lvl261.sok
+
+algorithm: GREEDY
+heuristic: In place
+cost: 102
+expanded: 9616
+frontier: 277
+time: 476
+level: lvl261.sok
+
+algorithm: GREEDY
+heuristic: Path
+cost: 78
+expanded: 57727
+frontier: 1262
+time: 23194
+level: lvl261.sok
+
+algorithm: GREEDY
+heuristic: Distance
+cost: 98
+expanded: 165138
+frontier: 7589
+time: 64101
+level: lvl261.sok
+
+algorithm: ASTAR
+heuristic: In place
+cost: 70
+expanded: 472341
+frontier: 8674
+time: 439196
+level: lvl261.sok
+
+algorithm: ASTAR
+heuristic: Path
+cost: 70
+expanded: 391060
+frontier: 14095
+time: 467462
+level: lvl261.sok
+
+algorithm: ASTAR
+heuristic: Distance
+cost: 70
+expanded: 473257
+frontier: 7720
+time: 440769
+level: lvl261.sok
+
+algorithm: IDASTAR
+heuristic: In place
+cost: 70
+expanded: 115267
+frontier: 41
+time: 5426923
+level: lvl261.sok
+
+algorithm: IDASTAR
+heuristic: Path
+cost: 70
+expanded: 99464
+frontier: 41
+time: 5303220
+level: lvl261.sok
+
+algorithm: IDASTAR
+heuristic: Distance
+cost: 70
+expanded: 113306
+frontier: 41
+time: 5924956
+level: lvl261.sok
+
+algorithm: BFS
+cost: 42
+expanded: 2002
+frontier: 51
+time: 83
+level: lvl253.sok
+
+algorithm: DFS
+cost: 92
+expanded: 613
+frontier: 53
+time: 49
+level: lvl253.sok
+
+algorithm: IDDFS
+cost: 42
+expanded: 249
+frontier: 22
+time: 584
+level: lvl253.sok
+
+algorithm: GREEDY
+heuristic: In place
+cost: 42
+expanded: 567
+frontier: 37
+time: 61
+level: lvl253.sok
+
+algorithm: GREEDY
+heuristic: Path
+cost: 42
+expanded: 1373
+frontier: 24
+time: 498
+level: lvl253.sok
+
+algorithm: GREEDY
+heuristic: Distance
+cost: 44
+expanded: 1419
+frontier: 62
+time: 89
+level: lvl253.sok
+
+algorithm: ASTAR
+heuristic: In place
+cost: 42
+expanded: 1910
+frontier: 53
+time: 105
+level: lvl253.sok
+
+algorithm: ASTAR
+heuristic: Path
+cost: 42
+expanded: 1808
+frontier: 77
+time: 841
+level: lvl253.sok
+
+algorithm: ASTAR
+heuristic: Distance
+cost: 42
+expanded: 2026
+frontier: 47
+time: 121
+level: lvl253.sok
+
+algorithm: IDASTAR
+heuristic: In place
+cost: 42
+expanded: 214
+frontier: 21
+time: 582
+level: lvl253.sok
+
+algorithm: IDASTAR
+heuristic: Path
+cost: 42
+expanded: 189
+frontier: 21
+time: 6978
+level: lvl253.sok
+
+algorithm: IDASTAR
+heuristic: Distance
+cost: 42
+expanded: 277
+frontier: 22
+time: 673
+level: lvl253.sok
+
+algorithm: BFS
+cost: 45
+expanded: 1998
+frontier: 30
+time: 107
+level: lvl194.sok
+
+algorithm: DFS
+cost: 45
+expanded: 956
+frontier: 23
+time: 100
+level: lvl194.sok
+
+algorithm: IDDFS
+cost: 45
+expanded: 560
+frontier: 21
+time: 903
+level: lvl194.sok
+
+algorithm: GREEDY
+heuristic: In place
+cost: 45
+expanded: 732
+frontier: 44
+time: 70
+level: lvl194.sok
+
+algorithm: GREEDY
+heuristic: Path
+cost: 45
+expanded: 1097
+frontier: 33
+time: 264
+level: lvl194.sok
+
+algorithm: GREEDY
+heuristic: Distance
+cost: 45
+expanded: 2130
+frontier: 2
+time: 138
+level: lvl194.sok
+
+algorithm: ASTAR
+heuristic: In place
+cost: 45
+expanded: 1954
+frontier: 32
+time: 122
+level: lvl194.sok
+
+algorithm: ASTAR
+heuristic: Path
+cost: 45
+expanded: 1899
+frontier: 39
+time: 482
+level: lvl194.sok
+
+algorithm: ASTAR
+heuristic: Distance
+cost: 45
+expanded: 2117
+frontier: 12
+time: 122
+level: lvl194.sok
+
+algorithm: IDASTAR
+heuristic: In place
+cost: 45
+expanded: 558
+frontier: 20
+time: 835
+level: lvl194.sok
+
+algorithm: IDASTAR
+heuristic: Path
+cost: 45
+expanded: 558
+frontier: 20
+time: 3614
+level: lvl194.sok
+
+algorithm: IDASTAR
+heuristic: Distance
+cost: 45
+expanded: 562
+frontier: 21
+time: 1432
+level: lvl194.sok
+
+algorithm: BFS
+cost: 35
+expanded: 5435
+frontier: 412
+time: 292
+level: lvl280.sok
+
+algorithm: DFS
+cost: 154
+expanded: 1802
+frontier: 55
+time: 94
+level: lvl280.sok
+
+algorithm: IDDFS
+cost: 35
+expanded: 2364
+frontier: 8
+time: 1445
+level: lvl280.sok
+
+algorithm: GREEDY
+heuristic: In place
+cost: 36
+expanded: 208
+frontier: 42
+time: 41
+level: lvl280.sok
+
+algorithm: GREEDY
+heuristic: Path
+cost: 36
+expanded: 229
+frontier: 37
+time: 95
+level: lvl280.sok
+
+algorithm: GREEDY
+heuristic: Distance
+cost: 59
+expanded: 5253
+frontier: 86
+time: 367
+level: lvl280.sok
+
+algorithm: ASTAR
+heuristic: In place
+cost: 35
+expanded: 4345
+frontier: 413
+time: 263
+level: lvl280.sok
+
+algorithm: ASTAR
+heuristic: Path
+cost: 35
+expanded: 3400
+frontier: 391
+time: 751
+level: lvl280.sok
+
+algorithm: ASTAR
+heuristic: Distance
+cost: 35
+expanded: 6277
+frontier: 307
+time: 399
+level: lvl280.sok
+
+algorithm: IDASTAR
+heuristic: In place
+cost: 35
+expanded: 2081
+frontier: 8
+time: 1280
+level: lvl280.sok
+
+algorithm: IDASTAR
+heuristic: Path
+cost: 35
+expanded: 1787
+frontier: 8
+time: 3582
+level: lvl280.sok
+
+algorithm: IDASTAR
+heuristic: Distance
+cost: 35
+expanded: 2307
+frontier: 8
+time: 2060
+level: lvl280.sok
+
+algorithm: BFS
+cost: 67
+expanded: 77929
+frontier: 2499
+time: 12581
+level: lvl222.sok
+
+algorithm: DFS
+cost: 289
+expanded: 48520
+frontier: 77
+time: 4808
+level: lvl222.sok
+
+algorithm: IDDFS
+cost: 67
+expanded: 43632
+frontier: 11
+time: 260677
+level: lvl222.sok
+
+algorithm: GREEDY
+heuristic: In place
+cost: 85
+expanded: 12823
+frontier: 352
+time: 707
+level: lvl222.sok
+
+algorithm: GREEDY
+heuristic: Path
+cost: 77
+expanded: 8744
+frontier: 133
+time: 763
+level: lvl222.sok
+
+algorithm: GREEDY
+heuristic: Distance
+cost: 117
+expanded: 21328
+frontier: 559
+time: 1491
+level: lvl222.sok
+
+algorithm: ASTAR
+heuristic: In place
+cost: 67
+expanded: 68323
+frontier: 2170
+time: 14138
+level: lvl222.sok
+
+algorithm: ASTAR
+heuristic: Path
+cost: 67
+expanded: 57592
+frontier: 1946
+time: 13437
+level: lvl222.sok
+
+algorithm: ASTAR
+heuristic: Distance
+cost: 67
+expanded: 70799
+frontier: 2267
+time: 14209
+level: lvl222.sok
+
+algorithm: IDASTAR
+heuristic: In place
+cost: 67
+expanded: 38648
+frontier: 11
+time: 193820
+level: lvl222.sok
+
+algorithm: IDASTAR
+heuristic: Path
+cost: 67
+expanded: 32133
+frontier: 11
+time: 161225
+level: lvl222.sok
+
+algorithm: IDASTAR
+heuristic: Distance
+cost: 67
+expanded: 37003
+frontier: 11
+time: 220237
+level: lvl222.sok
+
+algorithm: BFS
+cost: 60
+expanded: 61322
+frontier: 768
+time: 3566
+level: soko11.sok
+
+algorithm: DFS
+cost: 1212
+expanded: 61225
+frontier: 642
+time: 2786
+level: soko11.sok
+
+algorithm: IDDFS
+cost: 60
+expanded: 12879
+frontier: 32
+time: 71798
+level: soko11.sok
+
+algorithm: GREEDY
+heuristic: In place
+cost: 64
+expanded: 6851
+frontier: 1041
+time: 331
+level: soko11.sok
+
+algorithm: GREEDY
+heuristic: Path
+cost: 64
+expanded: 557
+frontier: 86
+time: 694
+level: soko11.sok
+
+algorithm: GREEDY
+heuristic: Distance
+cost: 94
+expanded: 47723
+frontier: 523
+time: 3116
+level: soko11.sok
+
+algorithm: ASTAR
+heuristic: In place
+cost: 60
+expanded: 60004
+frontier: 946
+time: 6482
+level: soko11.sok
+
+algorithm: ASTAR
+heuristic: Path
+cost: 60
+expanded: 52251
+frontier: 1705
+time: 163039
+level: soko11.sok
+
+algorithm: ASTAR
+heuristic: Distance
+cost: 60
+expanded: 61518
+frontier: 773
+time: 6277
+level: soko11.sok
+
+algorithm: IDASTAR
+heuristic: In place
+cost: 60
+expanded: 12769
+frontier: 32
+time: 64197
+level: soko11.sok
+
+algorithm: IDASTAR
+heuristic: Path
+cost: 60
+expanded: 11903
+frontier: 32
+time: 2077993
+level: soko11.sok
+
+algorithm: IDASTAR
+heuristic: Distance
+cost: 60
+expanded: 12922
+frontier: 32
+time: 82782
+level: soko11.sok
+
+algorithm: BFS
+cost: 28
+expanded: 976
+frontier: 27
+time: 56
+level: informatika01.sok
+
+algorithm: DFS
+cost: 52
+expanded: 1024
+frontier: 25
+time: 57
+level: informatika01.sok
+
+algorithm: IDDFS
+cost: 28
+expanded: 333
+frontier: 11
+time: 205
+level: informatika01.sok
+
+algorithm: GREEDY
+heuristic: In place
+cost: 28
+expanded: 441
+frontier: 69
+time: 70
+level: informatika01.sok
+
+algorithm: GREEDY
+heuristic: Path
+cost: 28
+expanded: 411
+frontier: 56
+time: 100
+level: informatika01.sok
+
+algorithm: GREEDY
+heuristic: Distance
+cost: 29
+expanded: 244
+frontier: 36
+time: 36
+level: informatika01.sok
+
+algorithm: ASTAR
+heuristic: In place
+cost: 28
+expanded: 934
+frontier: 37
+time: 69
+level: informatika01.sok
+
+algorithm: ASTAR
+heuristic: Path
+cost: 28
+expanded: 908
+frontier: 43
+time: 163
+level: informatika01.sok
+
+algorithm: ASTAR
+heuristic: Distance
+cost: 28
+expanded: 964
+frontier: 32
+time: 127
+level: informatika01.sok
+
+algorithm: IDASTAR
+heuristic: In place
+cost: 28
+expanded: 331
+frontier: 9
+time: 232
+level: informatika01.sok
+
+algorithm: IDASTAR
+heuristic: Path
+cost: 28
+expanded: 321
+frontier: 9
+time: 644
+level: informatika01.sok
+
+algorithm: IDASTAR
+heuristic: Distance
+cost: 28
+expanded: 325
+frontier: 9
+time: 264
+level: informatika01.sok
